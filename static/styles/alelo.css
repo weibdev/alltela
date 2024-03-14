@@ -1,0 +1,772 @@
+@font-face {
+    font-family: Museo Sans;
+    src: url(assets/fonts/MuseoSans_500.otf);
+}
+
+html, body {
+    height: 100%;
+    background: #ffffff;
+    color: #505050;
+
+}
+
+#noRegister{
+    position: absolute;
+    left: 20%;
+    right: 4.88%;
+    bottom: -10%;
+
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #0E7F61;
+}
+
+
+body {
+    flex-direction: column;
+    display: flex;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+main {
+    flex-shrink: 0;
+}
+
+main.center-segment {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+main.center-segment > .ui.container.medium {
+    max-width: 450px !important;
+}
+
+main.center-segment > .ui.container.large {
+    max-width: 700px !important;
+}
+/* AJUSTE PADDING 3rem TO initial */ 
+main.center-segment > .ui.container > .ui.segment {
+    padding: initial;
+    padding-bottom: 50px;
+    background: #fcfcfc05;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form .buttons {
+    margin-top: 0em;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form .buttons.align-right button,
+main.center-segment > .ui.container > .ui.segment .segment-form .buttons.align-right input {
+    margin: 0 0 0 0.25em;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form .column .buttons.align-left button.link-button,
+main.center-segment > .ui.container > .ui.segment .segment-form .column .buttons.align-left input.link-button {
+    padding: .78571429em 1.5em .78571429em 0;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form {
+    text-align: left;
+    width: 18em;
+    margin: 0 auto;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form .align-center {
+    text-align: center;
+}
+
+main.center-segment > .ui.container > .ui.segment .segment-form .align-right {
+    text-align: right;
+}
+
+.cookie-policy-message {
+    font-size: 14px;
+}
+
+footer {
+    padding: 2rem 0;
+}
+
+body .product-title .product-title-text {
+    margin: 0;
+}
+
+body .center-segment .product-title .product-title-text {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.ui.menu.fixed.app-header .product-logo {
+    padding-left: 0;
+}
+
+#product-title{
+    position: relative;
+    top: -80px;
+}
+
+@media only screen and (max-width: 375px) {
+    #product-title{
+        width: 0%;
+        /* left: -110px;
+        top: -50px; */
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #product-title{
+        width: 0%;
+       /* align-items: center;*/
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #product-title{
+        width: -110%;
+        align-items: flex-start;
+    }
+}
+
+main #toc {
+    position: sticky;
+    top: 93px;
+}
+
+main .ui.segment.toc {
+    padding: 20px;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li.sub {
+    margin-left: 20px;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li > a {
+    color: rgba(0,0,0,.87);
+    text-decoration: none;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li:before {
+    content: "\2219";
+    font-weight: bold;
+    font-size: 1.6em;
+    line-height: 0.5em;
+    display: inline-block;
+    width: 1em;
+    margin-left: -0.7em;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li.sub:before {
+    content: "\2192";
+    margin-left: -1em;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li:hover a {
+    color: #ff5000;
+    text-decoration: none;
+}
+
+main .ui.segment.toc ul.ui.list.nav > li:hover:before {
+    color: #ff5000;
+}
+
+.cookie-policy-message {
+    display: none;
+}
+
+.btn-alelo {
+    width: 100%;
+    background-color: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.ui.primary.button {
+    background-color: #487f62;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.ui.primary.button:active, .ui.primary.buttons .button:active {
+    background-color: #487f62;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.ui.primary.button:focus, .ui.primary.buttons .button:focus {
+    background-color: #487f62;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.ui.primary.button:hover, .ui.primary.buttons .button:hover {
+    background-color: #5cb285;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+#loginForm {
+    margin-top: 50px;
+}
+
+.footer-alelo {
+    background: #0E7F61;
+    color: #fcfcfc;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.footer-alelo p {
+    color: #fcfcfc !important;
+    font-weight: bold !important;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.footer-alelo img {
+    width: 75px;
+    margin-top: 15px;
+}
+
+::placeholder {
+    color: #878787;
+    opacity: 1;
+}
+
+#ui-header {
+    position: absolute;
+    width: 328px;
+    height: 32px;
+    left: 56px;
+    bottom:100%;
+
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+
+    color: #0E7F61;
+}
+
+#usernameUserInput {
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 150%;
+    background: #FFFFFF;
+
+    border: 1px solid #F0F0F0;
+    border-radius: 4px; 
+}
+
+#password {
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 150%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    box-sizing: border-box;
+    width: 328px;
+    height: 57px;
+    left: 16px;
+    top: 330px;
+    background: #FFFFFF;
+
+    border: 1px solid #F0F0F0;
+    border-radius: 4px; 
+}
+
+.lnr-eye {
+    position: absolute;
+    top: 5px;
+    right: 17px;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
+.align{
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+}
+
+#lock-icon {
+    position: absolute;
+    left: 150px;
+    top: 4px;
+    display: flex;
+    align-content: end;
+    justify-content: end;
+}
+
+@media(max-width: 375px){
+    #passwordRecoverLink {
+        left: 130px;
+    }
+    #lock-icon{
+        left: 160px;
+    }
+}
+
+#internal-circle {
+    position: relative;
+    left: 19px;
+}
+
+
+.ui.button.link-button {
+    background: 0 0;
+    color: #0E7F61;
+}
+
+@media (max-width: 768px) {
+    .footer-alelo{
+        display: none;
+    }
+    #ui-header{
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #page-all{
+        position: relative;
+        top: 80px;
+    }
+}
+
+#usernameRecoverLink {
+    display: none;
+}
+
+#passwordRecoverLink {
+    width: 100%;
+    max-width: 190px;
+    position: absolute;
+    left: 140px;
+    color: #0E7F61;
+    font-family: 'Museo Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+#padlock-icon {
+    vertical-align: baseline;
+    fill: #0E7F61;
+}
+.segment-form {
+    width: 304px!important;
+}
+.column.mobile.center.aligned.tablet.left.aligned.computer.left.aligned.buttons.tablet.no-padding-left-first-child.computer.no-padding-left-first-child {
+    text-align:center!important;
+}
+button#registerLink {
+    padding: 0px;
+}
+
+#error-msg{
+    text-align: center;
+    font-size: 14px;
+}
+
+.lock.icon {
+    color: #0E7F61;
+}
+
+.ui.negative.message {
+    background-color: #fff6f6;
+    color: #D2373C;
+}
+
+#modal-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 8px;
+    position: relative;
+    left: 30px;
+    width: 328px;
+    height: 430px;
+    background: #FFFFFF;
+    box-shadow: -3px 3px 20px 5px rgb(40 40 40 / 5%);
+    border-radius: 8px;
+}
+
+
+#page-title{
+    width: 297px;
+    height: 32px;
+    top: 80px;
+    position: absolute;
+    left: -130px;
+    
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 150%;
+
+    align-items: center;
+    text-align: center;
+
+    color: #D2373C;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+#paragraf-1{
+    width: 296px;
+    height: 84px;
+    position: absolute;
+    top: 130px;
+    left: -130px;
+    
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    align-items: center;
+    text-align: center;
+
+    color: #505050;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+#poligom-icon{
+    position: absolute;
+    left: 5.56%;
+    right: 5.56%;
+    top: 10.5%;
+    bottom: 10.5%;
+}
+
+#stick-icon{
+    position: absolute;
+    left: 47.04%;
+    right: 47.04%;
+    top: 15.42%;
+    bottom: 33.18%;
+}
+
+#dot-icon{
+    position: absolute;
+    left: 47.04%;
+    right: 47.04%;
+    top: 22%;
+    bottom: 23.69%;
+}
+
+#submit-button{
+    background: #0E7F61;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+    line-height: 150%;
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    right: 0%;
+    bottom: 8%;
+    top: 80%;
+    border-radius: 4px;
+}
+
+
+#submit-button:active, #submit-button .button:active {
+    background-color: #487f62;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+#submit-button:focus, #submit-button .button:focus {
+    background-color: #487f62;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+#submit-button:hover, #submit-button .button:hover {
+    background-color: #5cb285;
+    color: #fff;
+    text-shadow: none;
+    font-family: Museo Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    #submit-button{
+        position: absolute;
+        left: 65px;
+    }
+}
+
+#modal-container-login-failed{
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+    gap: 8px;
+    position: relative;
+    height: 396px;
+    background: #FFFFFF;
+    box-shadow: -3px 3px 20px 5px rgb(40 40 40 / 5%);
+    border-radius: 8px;    
+}
+
+#submit-button-login-failed{
+    background-color: #008060;
+    position: relative;
+    width: 328px;
+    height: 48px;
+    left: 0px;
+    top: 290px;
+}
+
+#paragraf-modal-login-failed{
+    width: 296px;
+    height: 84px;
+    position: absolute;
+    top: 130px;
+    left: -135px;
+    
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    align-items: center;
+    text-align: center;
+
+    color: #505050;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#modal-title-login-failed{
+        width: 297px;
+    height: 32px;
+    top: 80px;
+    position: absolute;
+    left: -130px;
+    
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 150%;
+
+    align-items: center;
+    text-align: center;
+
+    color: #D2373C;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+@media (max-width: 375px){
+    #modal-container-login-failed{
+    top: 50px;
+    left: -20px;
+}
+    #submit-button-login-failed{
+        width: 285px;
+}
+    #paragraf-modal-login-failed{
+        left: -140px;
+        font-size: 13px;
+    }
+    #modal-title-login-failed{
+        left: -140px;
+    }
+    
+}
+
+/* Modal da tela de Erro - user block*/
+#modal-container-error{
+    padding: 32px 24px;
+    gap: 8px;
+    position: relative;
+    width: 328px;
+    height: 388px;
+    background: #FFFFFF;
+    box-shadow: -3px 3px 20px 5px rgb(40 40 40 / 5%);
+    border-radius: 8px; 
+}
+
+#confirm-button-error{
+    position: relative;
+    width: 100%;
+    height: 48px;
+    left: 0px;
+    top: 280px;
+} 
+
+#paragraf-error{
+    width: 296px;
+    height: 63px;
+    left: -140px;
+    top: 50px;
+    position: relative;
+
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #505050;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#page-title-error{
+    width: 297px;
+    height: 64px;
+    left: -100px;
+    top: 50px;
+    position: relative;
+    
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #D2373C;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.cell {
+    height: 50vh;
+    position: fixed;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cover {
+    height: 50vh;
+
+}
+
+::-ms-reveal {
+    display: none;
+}
+
+/* Limite de sessao   */
+/*@media only screen and (max-width: 375px) {
+.ui.table:not(.unstackable) tbody, .ui.table:not(.unstackable) tr, .ui.table:not(.unstackable) tr > td, .ui.table:not(.unstackable) tr > th {
+	width: auto !important;
+	display: flex !important;
+}
+}*/
+
+table tr td.table-alelo {
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+ .ui.table:not(.unstackable) tr>td.table-alelo {
+   display: none !important;
+ }
+}

