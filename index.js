@@ -1,9 +1,21 @@
 const express = require("express")
 const app = express()
 const path = require("path") 
-var cors = require('cors')
 
-app.use(cors())
+const corsOpts = {
+  origin: '*',
+
+  methods: [
+    'GET',
+    'POST',
+  ],
+
+  allowedHeaders: [
+    'Content-Type',
+  ],
+};
+
+app.use(cors(corsOpts));
 
 app.use(express.static(path.join(__dirname, "static")))
 
